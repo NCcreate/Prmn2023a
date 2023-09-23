@@ -33,7 +33,7 @@ def main():
     date_time = datetime.combine(date,time)
 
 #Directions APIキー
-    api_key = st.session_state['api_key']
+    api_key = st.secrets['api_key']
     departure = st.sidebar.text_input("乗車地点を入力してください")
     destination = st.sidebar.text_input("降車地点を入力してください")
 
@@ -59,7 +59,7 @@ def main():
 
 #乗車地点の座標を取得
     if departure :
-      geocoding_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={departure}&key={st.session_state['api_key']}"
+      geocoding_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={departure}&key={st.secrets['api_key']}"
       response = requests.get(geocoding_url)
       geocoding_data = response.json()
 
@@ -82,7 +82,7 @@ def main():
 
 #降車地点の座標を取得
     if destination :
-      geocoding_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={destination}&key={st.session_state['api_key']}"
+      geocoding_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={destination}&key={st.secrets['api_key']}"
       response = requests.get(geocoding_url)
       geocoding_data = response.json()
 
@@ -91,7 +91,7 @@ def main():
         arrival_coordinates = (location["lat"],location["lng"])
 
 #Directions APIを使用して到着時間を計算
-      directions_url = f"https://maps.googleapis.com/maps/api/directions/json?origin={departure}&destination={destination}&key={st.session_state['api_key']}"
+      directions_url = f"https://maps.googleapis.com/maps/api/directions/json?origin={departure}&destination={destination}&key={st.secrets['api_key']}"
       response_directions = requests.get(directions_url)
       directions_data = response_directions.json()
 
