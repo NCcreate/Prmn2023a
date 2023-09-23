@@ -1,4 +1,4 @@
-pip freeze > requirements.txt
+!pip freeze > requirements.txt
 !pip install Streamlit
 !pip install yfinance
 !pip install streamlit folium googlemaps
