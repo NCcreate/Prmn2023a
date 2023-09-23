@@ -1,6 +1,5 @@
 Streamlit
 yfinance
-streamlit_folium googlemaps
 streamlit_folium
 haversine
 polyline                                      
