@@ -1,10 +1,10 @@
-!pip install Streamlit
-!pip install yfinance
-!pip install streamlit folium googlemaps
-!pip install streamlit folium
-!pip install streamlit folium streamlit_folium requests
-!pip install haversine
-!pip install polyline
+Streamlit
+yfinance
+streamlit folium googlemaps
+streamlit folium
+streamlit folium streamlit_folium requests
+haversine
+polyline
 
 import streamlit as st
 import requests
