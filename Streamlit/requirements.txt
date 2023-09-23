@@ -1,6 +1,8 @@
 Streamlit
 yfinance
 streamlit_folium
-streamlit_folium googlemaps
+googlemaps
 haversine
-polyline                                      
+polyline
+requests
+geocoder
