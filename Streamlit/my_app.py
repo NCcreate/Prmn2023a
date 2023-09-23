@@ -33,7 +33,7 @@ def main():
     date_time = datetime.combine(date,time)
 
 #Directions APIキー
-    api_key = st.secrets['api_key']
+    api_key = st.secrets["api_key"]
     departure = st.sidebar.text_input("乗車地点を入力してください")
     destination = st.sidebar.text_input("降車地点を入力してください")
 
