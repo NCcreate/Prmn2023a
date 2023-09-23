@@ -1,8 +1,6 @@
-Streamlit
 yfinance
-streamlit folium googlemaps
-streamlit folium
-streamlit folium streamlit_folium requests
+streamlit_folium googlemaps
+streamlit_folium
 haversine
 polyline
 
@@ -20,7 +18,6 @@ from haversine import haversine
 from streamlit_folium import folium_static
 from datetime import datetime,timedelta
 
-%%writefile my_app.py
 import streamlit as st
 import requests
 import random
@@ -226,6 +223,3 @@ def names(driver_name) :
 #出力
 if __name__ == "__main__":
   main()
-
-print('your globalip: ' + requests.get('https://ifconfig.me').text)
-!streamlit run my_app.py & sleep 3 && npx localtunnel --port 8501
